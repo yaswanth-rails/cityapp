@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1051521831160",
+    "firebase_url": "https://nearmeapp-11.firebaseio.com",
+    "project_id": "nearmeapp-11",
+    "storage_bucket": "nearmeapp-11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1051521831160:android:7313f36dd6598b05",
+        "android_client_info": {
+          "package_name": "com.quanlabs.nearme4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1051521831160-kp75dbfpv5ci2amj83hh72u6uee51j67.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.quanlabs.nearme4",
+            "certificate_hash": "eba3682bf65b4ef20bf34220ca20b83232206960"
+          }
+        },
+        {
+          "client_id": "1051521831160-6rk898qbg80m2srrcutsosj04j4frl6r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD13aRjXSqwqIv68xVqYJ2y2GLGHTHTlA8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1051521831160-6rk898qbg80m2srrcutsosj04j4frl6r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

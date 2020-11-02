@@ -1,0 +1,127 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    
+     <ion-buttons end>
+     <a ion-button icon-only (click)="openPopover($event)">
+      <ion-icon name="md-happy"></ion-icon>
+    </a>
+    </ion-buttons>
+    <ion-title>{{ "MY_FAVORITES" | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+ 
+
+  <empty-view *ngIf="isErrorViewVisible" icon="alert" [text]="'ERROR_NETWORK' | translate">
+  </empty-view>
+
+  <empty-view *ngIf="isEmptyViewVisible" icon="heart" [text]="'EMPTY_FAVORITES' | translate">
+  </empty-view>
+
+
+<!-- <div (click)="gotoPlace()">
+<button>place </button></div>
+
+
+<div (click)="gotoCityupdate()">
+<button>CityUpate</button></div>
+
+<div (click)="gotoSale()">
+<button>Sale</button></div>
+<div (click)="gotoRent()">
+<button>Rent</button></div>
+<div (click)="gotoJobs()">
+<button>Jobs</button></div>
+<div (click)="gotoHomeServiceList()">
+<button>HomeService</button></div> -->
+
+
+  <ion-grid>
+    <ion-row>
+
+      <ion-col>
+           <ion-avatar item-left (click)="gotoPlace()">
+        <p class="saletext"> Add Place List </p>
+        </ion-avatar>
+       </ion-col>
+       <ion-col>
+         <ion-avatar item-left (click)="gotoCityupdate()">
+         <p class="saletext">CityUpate</p>
+        </ion-avatar>
+      </ion-col>
+       </ion-row>
+      </ion-grid>
+
+
+
+  <ion-grid>
+    <ion-row>
+
+      <ion-col>
+           <ion-avatar item-left (click)="gotoSale()">
+        <p class="saletext">Sale</p>
+        </ion-avatar>
+       </ion-col>
+       <ion-col>
+         <ion-avatar item-left (click)="gotoRent()">
+         <p class="saletext">Rent</p>
+        </ion-avatar>
+      </ion-col>
+       </ion-row>
+      </ion-grid>
+
+
+  <ion-grid>
+    <ion-row>
+
+      <ion-col>
+           <ion-avatar item-left (click)="gotoJobs()">
+        <p class="saletext"> Jobs </p>
+        </ion-avatar>
+       </ion-col>
+       <ion-col>
+         <ion-avatar item-left (click)="gotoHomeServiceList()">
+         <p class="saletext">Home Service</p>
+        </ion-avatar>
+      </ion-col>
+       </ion-row>
+      </ion-grid>
+
+<!--   <div [@staggerIn]="places.length">
+    <ion-card class="shadow" no-margin margin-bottom color="light" *ngFor="let place of places" (click)="goToPlace(place)">
+      <div class="card-img">
+        <img-loader [src]="place.image?.url()" (load)="onImageLoad($event)"></img-loader>
+      </div>
+      <ion-card-content>
+        <ion-row no-padding>
+          <ion-col col-8>
+            <p class="bold">{{ place.title }}</p>
+            <star-rating *ngIf="place.rating"
+              [starType]="'svg'"
+              [size]="'medium'"
+              [readOnly]="true"
+              [showHalfStars]="false"
+              [rating]="place.rating">
+            </star-rating>
+            <span class="bold text-small" ion-text color="accent">{{ place.category?.title }}</span>
+          </ion-col>
+          <ion-col col-4 text-end align-self-end>
+            <span class="bold text-small" ion-text color="primary">
+              {{ place.distance(params.location, params.unit) }}
+            </span>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div> -->
+
+  <ion-infinite-scroll (ionInfinite)="onLoadMore($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

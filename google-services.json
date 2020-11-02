@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "128458923309",
+    "firebase_url": "https://cityapp2-78816.firebaseio.com",
+    "project_id": "cityapp2-78816",
+    "storage_bucket": "cityapp2-78816.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128458923309:android:7313f36dd6598b05",
+        "android_client_info": {
+          "package_name": "com.quanlabs.nearme4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128458923309-mvj1krbg4en663ibbk31qkq7j3ec4hle.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.quanlabs.nearme4",
+            "certificate_hash": "eba3682bf65b4ef20bf34220ca20b83232206960"
+          }
+        },
+        {
+          "client_id": "128458923309-72arlc3c8sl7jcbdpq4app9ih755sls4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWbc0KTF6Zyygt00U_iRLTm_V_2dNxbEE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128458923309-72arlc3c8sl7jcbdpq4app9ih755sls4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

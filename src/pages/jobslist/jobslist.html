@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      <span *ngIf="params.isFeatured">{{ 'FEATURED' | translate }}</span>
+      <span *ngIf="params.location">{{ 'NEARBY' | translate }}</span>
+      <span *ngIf="!params.jobs &&!params.isFeatured && !params.location">
+        {{ 'NEW' | translate }}
+      </span>
+      <span *ngIf="params.jobs">{{ params.jobs.title }}</span>
+    </ion-title>
+    
+     <ion-buttons end>
+     <a ion-button icon-only (click)="openPopover($event)">
+      <ion-icon name="md-happy"></ion-icon>
+    </a>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-refresher (ionRefresh)="onReload($event)">
+    <ion-refresher-content pullingText="{{ 'PULL_TO_REFRESH' | translate }}" refreshingText="{{ 'REFRESHING' | translate }}">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <empty-view *ngIf="isErrorViewVisible" icon="alert" [text]="'ERROR_NETWORK' | translate">
+  </empty-view>
+
+  <empty-view *ngIf="isEmptyViewVisible" icon="map" [text]="'EMPTY_PLACES' | translate">
+  </empty-view>
+
+  <div [@staggerIn]="jobslists.length">
+    <ion-card class="shadow" no-margin margin-bottom color="light" *ngFor="let jobslist of jobslists" (click)="goToJobsList(jobslist)">
+      <div class="card-img">
+        <img-loader [src]="jobslist.image?.url()" (load)="onImageLoad($event)"></img-loader>
+      </div>
+      <ion-card-content>
+        <ion-row no-padding>
+          <ion-col col-8>
+            <p class="bold">{{ jobslist.title }}</p>
+            <star-rating *ngIf="jobslist.rating"
+              [starType]="'svg'"
+              [size]="'medium'"
+              [readOnly]="true"
+              [showHalfStars]="false"
+              [rating]="jobslist.rating">
+            </star-rating>
+            <span class="bold text-small" ion-text color="accent">{{ jobslist.jobs?.title }}</span>
+          </ion-col>
+          <ion-col col-4 text-end align-self-end>
+            <span class="bold text-small" ion-text color="primary">
+              {{ jobslist.distance(params.location, params.unit) }}
+            </span>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-infinite-scroll (ionInfinite)="onLoadMore($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

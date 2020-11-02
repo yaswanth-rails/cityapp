@@ -1,0 +1,82 @@
+<ion-header no-border>
+  <ion-navbar class="transparent" color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    
+     <ion-buttons end>
+     <a ion-button icon-only (click)="openPopover($event)">
+      <ion-icon name="md-happy"></ion-icon>
+    </a>
+    </ion-buttons>
+    <ion-title>{{ "ADD_JOBSLIST" | translate }}</ion-title>
+  </ion-navbar>
+  <ion-toolbar color="primary">
+    <ion-searchbar color="light" mode="ios"
+      [placeholder]="'ENTER_ADDRESS' | translate"
+      (keyup.enter)="onSearchAddress($event)">
+    </ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div #map class="map" id="map"></div>
+
+  <ion-list>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+
+      <ion-item class="transparent">
+        <ion-label stacked color="light">{{ "NAME" | translate }} *</ion-label>
+        <ion-input type="text" formControlName="name"></ion-input>
+      </ion-item>
+
+      <ion-item class="transparent">
+        <ion-label stacked color="light">{{ "CATEGORY" | translate }} *</ion-label>
+        <ion-select formControlName="jobs">
+          <ion-option *ngFor="let jobs of jobs" [value]="jobs">
+            {{ jobs.title }}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item class="transparent">
+        <ion-label stacked color="light">{{ "DESCRIPTION" | translate }} *</ion-label>
+        <ion-textarea rows="4" formControlName="description"></ion-textarea>
+      </ion-item>
+
+      <ion-item class="transparent">
+        <ion-label stacked color="light">{{ "WEBSITE" | translate }}</ion-label>
+        <ion-input type="url" formControlName="website"></ion-input>
+      </ion-item>
+
+      <ion-item class="transparent">
+        <ion-label stacked color="light">{{ "ADDRESS" | translate }}</ion-label>
+        <ion-input type="text" formControlName="address">
+        </ion-input>
+      </ion-item>
+
+      <ion-item class="transparent">
+        <ion-label stacked color="light">{{ "PHONE" | translate }}</ion-label>
+        <ion-input type="text" formControlName="phone"></ion-input>
+      </ion-item>
+
+      <ion-item class="transparent">
+        <ion-label class="text-small" color="light">
+          {{ "UPLOAD_PICTURE" | translate }}
+        </ion-label>
+        <button type="button" ion-button clear item-end icon-only (click)="onUpload()">
+          <ion-icon name="camera" item-start color="light"></ion-icon>
+        </button>
+      </ion-item>
+
+      <div padding>
+        <button type="submit" ion-button block round color="light">
+          {{ "SUBMIT" | translate }}
+        </button>
+      </div>
+
+    </form>
+  </ion-list>
+</ion-content>

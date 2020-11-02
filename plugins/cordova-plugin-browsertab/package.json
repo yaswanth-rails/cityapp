@@ -1,0 +1,57 @@
+{
+  "_from": "git+https://github.com/fmendoza/cordova-plugin-browsertab.git",
+  "_id": "cordova-plugin-browsertab@0.2.1",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-plugin-browsertab",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/fmendoza/cordova-plugin-browsertab.git",
+    "rawSpec": "https://github.com/fmendoza/cordova-plugin-browsertab.git",
+    "saveSpec": "git+https://github.com/fmendoza/cordova-plugin-browsertab.git",
+    "fetchSpec": "https://github.com/fmendoza/cordova-plugin-browsertab.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/fmendoza/cordova-plugin-browsertab.git#2c0bd080943338a6df7b35887ec88c08153fafa7",
+  "_spec": "https://github.com/fmendoza/cordova-plugin-browsertab.git",
+  "_where": "/Users/Nagu/Downloads/Nearme/NearmeApp",
+  "author": {
+    "name": "Google, Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/fmendoza/cordova-plugin-browsertab/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Google Inc."
+    }
+  ],
+  "cordova": {
+    "id": "cordova-plugin-browsertab",
+    "platforms": [
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "In-app browser tabs for Android and iOS",
+  "homepage": "https://github.com/fmendoza/cordova-plugin-browsertab#readme",
+  "keywords": [
+    "sfsafariviewcontroller",
+    "custom-tabs",
+    "browser-tabs",
+    "browser"
+  ],
+  "license": "Apache-2.0",
+  "name": "cordova-plugin-browsertab",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fmendoza/cordova-plugin-browsertab.git"
+  },
+  "version": "0.2.1"
+}

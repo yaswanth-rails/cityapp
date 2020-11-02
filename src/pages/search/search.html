@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{ 'SEARCH' | translate }}</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+
+    <ion-searchbar mode="ios"
+      (ionInput)="onSearch($event)"
+      [placeholder]="'SEARCH' | translate">
+    </ion-searchbar>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-refresher (ionRefresh)="loadData($event)">
+    <ion-refresher-content pullingText="{{ 'PULL_TO_REFRESH' | translate }}" refreshingText="{{ 'REFRESHING' | translate }}">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <empty-view *ngIf="isErrorViewVisible" icon="alert" [text]="'ERROR_NETWORK' | translate">
+  </empty-view>
+
+  <empty-view *ngIf="isEmptyViewVisible" icon="alert" [text]="'EMPTY_DATA' | translate">
+  </empty-view>
+
+  <ion-row>
+    <ion-col col-6 float-left *ngFor="let place of places"
+      (click)="navigateTo('PlaceDetailPage', { place: place })">
+      <ion-card class="shadow" color="light">
+
+        <div class="image-container">
+          <img-loader useImg (load)="onImageLoad($event)" [src]="place.imageThumb?.url()">
+          </img-loader>
+        </div>
+
+        <ion-card-content no-padding padding text-nowrap>
+          <p class="text-medium ellipsis bold">{{ place.title }}</p>
+          <p class="text-medium ellipsis bold" ion-text color="accent">
+            {{ place.category.title }}
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

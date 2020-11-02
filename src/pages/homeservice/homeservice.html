@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    
+     <ion-buttons end>
+     <a ion-button icon-only (click)="openPopover($event)">
+      <ion-icon name="md-happy"></ion-icon>
+    </a>
+    </ion-buttons>
+    <ion-title>{{ 'HOMESERVICE' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content #container>
+
+  <empty-view *ngIf="isErrorViewVisible" icon="alert"
+    [text]="'ERROR_NETWORK' | translate">
+  </empty-view>
+
+  <empty-view *ngIf="isEmptyViewVisible" icon="bookmark"
+    [text]="'EMPTY_CATEGORIES' | translate">
+  </empty-view>
+
+  <ion-refresher (ionRefresh)="onReload($event)">
+    <ion-refresher-content
+      pullingText="{{ 'PULL_TO_REFRESH' | translate }}"
+      refreshingText="{{ 'REFRESHING' | translate }}">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <!-- <div [@staggerIn]="homeservice.length">
+    <div class="card-img" *ngFor="let homeservice of homeservice" (click)="goToHomeServiceList(homeservice)">
+      <img-loader [src]="homeservice.image.url()" (load)="onImageLoad($event)"></img-loader>
+      <div>
+        <h5 class="bold" ion-text color="light">{{ homeservice.title }}</h5>
+        <span class="gradient-bg bold" ion-text color="light">
+          {{ homeservice.homeservicelistCount }} {{ 'PLACES' | translate }}
+        </span>
+      </div>
+    </div>
+  </div> -->
+    <ion-list *ngIf="isContentViewVisible">
+    <ion-item *ngFor="let homeservice of homeservice" (click)="goToHomeServiceList(homeservice)">
+      <ion-avatar item-left>
+        <img src="assets/img/tag.png" offset="100"
+          [lazyLoad]="homeservice.imageThumb.url()"
+          [scrollTarget]="container.getScrollElement()">
+      </ion-avatar>
+      <h2>{{ homeservice.title }}</h2>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

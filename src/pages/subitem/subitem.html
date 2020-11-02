@@ -1,0 +1,158 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+     <ion-buttons end>
+     <a ion-button icon-only (click)="openPopover($event)">
+      <ion-icon name="more"></ion-icon>
+    </a>
+    </ion-buttons>
+    <ion-title>Add List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!--<ion-content padding #container>
+
+
+  <ion-list>
+    <ion-item  color="dark"   (click)="goToPlaces()">
+      <ion-avatar item-left>
+        <h2><ion-icon name="create" color="primary"> Add Place </ion-icon></h2>
+        
+       
+      </ion-avatar>
+  
+    </ion-item>
+ </ion-list>
+
+   <ion-list>
+    <ion-item   color="dark"  (click)="goToAddHomeService()">
+      <ion-avatar item-left>
+        <h2> <ion-icon name="create" color="primary"> Add Home Service  </ion-icon></h2>
+       
+      </ion-avatar>
+  
+    </ion-item>
+  </ion-list>
+
+   <ion-list>
+    <ion-item  color="dark" no-lines  (click)="goToAddJobsList()">
+      <ion-avatar item-left>
+        <h2> <ion-icon name="create" color="primary" > Add Jobs List </ion-icon></h2>     
+                     
+      </ion-avatar>
+
+  
+    </ion-item>
+  </ion-list>
+
+   <ion-list>
+    <ion-item  color="dark" no-lines  (click)="goToAddOffersList()">
+      <ion-avatar item-left>
+        <h2> <ion-icon name="create" color="primary"> Add Offers List</ion-icon></h2>
+                       
+
+
+       
+      </ion-avatar>
+  
+    </ion-item>
+  </ion-list>
+
+   <ion-list>
+    <ion-item  color="dark" no-lines  (click)="goToAddUpdateList()">
+      <ion-avatar item-left>
+        <h2><ion-icon name="create" color="primary"> Add Update List</ion-icon></h2>
+                          
+      </ion-avatar>
+  
+    </ion-item>
+  </ion-list>
+
+    <ion-list>
+    <ion-item    color="dark" no-lines (click)="goToAddSaleList()">
+      <ion-avatar item-left>
+        <h2> <ion-icon name="create" color="primary"> Add Sale List</ion-icon></h2>
+                    
+
+       
+      </ion-avatar>
+  
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>-->
+<ion-content class="grid-basic-page">
+
+  <ion-grid>
+    <ion-row>
+
+      <ion-col>
+           <ion-avatar item-left (click)="goToPlaces()">
+         <ion-icon name="md-locate" color="primary"></ion-icon>
+        <p class="saletext"> Add Place List </p>
+        </ion-avatar>
+       </ion-col>
+       <ion-col>
+         <ion-avatar item-left (click)="goToAddHomeService()">
+         <ion-icon  class="Manicon" name="md-man" color="primary"></ion-icon>
+         <p class="saletext">Add Home Service </p>
+        </ion-avatar>
+      </ion-col>
+       </ion-row>
+      </ion-grid>
+
+
+
+    <ion-grid>
+       <ion-row>
+
+       <ion-col>
+      <ion-avatar item-left  (click)="goToAddJobsList()">
+       <ion-icon name="md-briefcase" color="primary"></ion-icon>
+
+       <p class="saletext">Add Jobs List </p>
+       
+      </ion-avatar>
+      </ion-col>
+
+       <ion-col>
+    <ion-avatar item-left (click)="goToAddUpdateList()">
+    <ion-icon name="md-paper" color="primary"></ion-icon>
+
+       <p class="saletext">Add News List</p>
+       
+      </ion-avatar>
+   
+      </ion-col>
+       </ion-row>
+  </ion-grid>
+
+
+
+    <ion-grid>
+       <ion-row>
+
+  <ion-col>
+      <ion-avatar item-left (click)="goToAddRentList()">
+      <ion-icon name="md-home" color="primary"></ion-icon>
+
+      <p class="saletext">Add Rent List </p>
+      </ion-avatar>
+      </ion-col>
+
+      <ion-col>
+      <ion-avatar item-left (click)="goToAddSaleList()">
+      <ion-icon name="md-basket" color="primary"></ion-icon>
+
+      <p class="saletext"> Add Sale List </p>
+       
+      </ion-avatar>
+  
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

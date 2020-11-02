@@ -1,0 +1,58 @@
+{
+  "_from": "git+https://github.com/taivo/parse-push-plugin.git",
+  "_id": "parse-push-plugin@1.0.8",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/parse-push-plugin",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/taivo/parse-push-plugin",
+    "rawSpec": "https://github.com/taivo/parse-push-plugin",
+    "saveSpec": "git+https://github.com/taivo/parse-push-plugin.git",
+    "fetchSpec": "https://github.com/taivo/parse-push-plugin.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/taivo/parse-push-plugin.git#67124cf5418ba8a3302bcdc4e62680c5a85140a0",
+  "_spec": "https://github.com/taivo/parse-push-plugin",
+  "_where": "/Users/Nagu/Downloads/Nearme/NearmeApp",
+  "author": {
+    "name": "Tai Vo"
+  },
+  "bugs": {
+    "url": "https://github.com/taivo/parse-push-plugin/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "parse-push-plugin",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "Parse.Push plugin for phonegap/cordova/ionic",
+  "homepage": "https://github.com/taivo/parse-push-plugin#readme",
+  "keywords": [
+    "cordova",
+    "phonegap",
+    "ionic framework",
+    "parse server",
+    "parse push",
+    "push notification",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "ISC",
+  "name": "parse-push-plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taivo/parse-push-plugin.git"
+  },
+  "version": "1.0.8"
+}

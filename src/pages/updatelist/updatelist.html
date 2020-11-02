@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      <span *ngIf="params.isFeatured">{{ 'FEATURED' | translate }}</span>
+      <span *ngIf="params.location">{{ 'NEARBY' | translate }}</span>
+      <span *ngIf="!params.cityupdate &&!params.isFeatured && !params.location">
+        {{ 'NEW' | translate }}
+      </span>
+      <span *ngIf="params.cityupdate">{{ params.cityupdate.title }}</span>
+    </ion-title>
+     <ion-buttons end>
+     <a ion-button icon-only (click)="openPopover($event)">
+      <ion-icon name="md-happy"></ion-icon>
+    </a>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-refresher (ionRefresh)="onReload($event)">
+    <ion-refresher-content pullingText="{{ 'PULL_TO_REFRESH' | translate }}" refreshingText="{{ 'REFRESHING' | translate }}">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <empty-view *ngIf="isErrorViewVisible" icon="alert" [text]="'ERROR_NETWORK' | translate">
+  </empty-view>
+
+  <empty-view *ngIf="isEmptyViewVisible" icon="map" [text]="'EMPTY_PLACES' | translate">
+  </empty-view>
+
+  <div [@staggerIn]="updatelists.length">
+    <ion-card class="shadow" no-margin margin-bottom color="light" *ngFor="let updatelist of updatelists" (click)="goToUpdateList(updatelist)">
+      <div class="card-img">
+        <img-loader [src]="updatelist.image?.url()" (load)="onImageLoad($event)"></img-loader>
+      </div>
+      <ion-card-content>
+        <ion-row no-padding>
+          <ion-col col-8>
+            <p class="bold">{{ updatelist.title }}</p>
+            <star-rating *ngIf="updatelist.rating"
+              [starType]="'svg'"
+              [size]="'medium'"
+              [readOnly]="true"
+              [showHalfStars]="false"
+              [rating]="updatelist.rating">
+            </star-rating>
+            <span class="bold text-small" ion-text color="accent">{{ updatelist.cityupdate?.title }}</span>
+          </ion-col>
+          <ion-col col-4 text-end align-self-end>
+            <span class="bold text-small" ion-text color="primary">
+              {{ updatelist.distance(params.location, params.unit) }}
+            </span>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-infinite-scroll (ionInfinite)="onLoadMore($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

@@ -1,0 +1,124 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-add-swift-support": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-admob-free": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-browsertab": {
+      "CUSTOM_TAB_COLOR_RGB": "#ffffff",
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-facebook4": {
+      "APP_ID": "1476767019020492",
+      "APP_NAME": "nagababumulukuri",
+      "ANDROID_SDK_VERSION": "4.+",
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-geofence": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-google-analytics": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-headercolor": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-mauron85-background-geolocation": {
+      "GOOGLE_PLAY_SERVICES_VERSION": "11+",
+      "ANDROID_SUPPORT_LIBRARY_VERSION": "23+",
+      "ICON": "@mipmap/icon",
+      "SMALL_ICON": "@mipmap/icon",
+      "ACCOUNT_NAME": "@string/app_name",
+      "ACCOUNT_LABEL": "@string/app_name",
+      "ACCOUNT_TYPE": "$PACKAGE_NAME.account",
+      "CONTENT_AUTHORITY": "$PACKAGE_NAME",
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "mx.ferreyra.callnumber": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "parse-push-plugin": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": {
+      "OKHTTP_VERSION": "3.+",
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-admob-sdk": {
+      "PLAY_SERVICES_VERSION": "11.0.4",
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-android-support-gradle-release": {
+      "ANDROID_SUPPORT_VERSION": "27.+",
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-actionsheet": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-promise-polyfill": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.quanlabs.nearme4"
+    }
+  }
+}

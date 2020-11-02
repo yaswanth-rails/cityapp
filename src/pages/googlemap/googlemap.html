@@ -1,0 +1,91 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>
+      Google Places
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div #map id="map"></div>
+    <button>clock here</button>
+
+</ion-content> -->
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    
+     <ion-buttons end>
+     <a ion-button icon-only (click)="openPopover($event)">
+      <ion-icon name="md-happy"></ion-icon>
+    </a>
+    </ion-buttons>
+    <ion-title>Maps</ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+ <ion-content padding>
+  <!--  <div>
+      <img [src]="url">
+     </div> -->   
+ 
+
+ <ion-item>
+<ion-label>Select Place</ion-label>
+  <ion-select [(ngModel)]="isType" (ionChange)="initMap()">
+  <ion-option value="">Select</ion-option>
+    <ion-option value="hospital">Hospital</ion-option>
+    <ion-option value="restaurant">Restaurant</ion-option>
+    <ion-option value="bank">Bank</ion-option>
+    <ion-option value="airport">Airport</ion-option>
+    <ion-option value="library">Library</ion-option>
+    <ion-option value="gym">Gym</ion-option>
+  <ion-option value="atm">Atm</ion-option>
+  <ion-option value="supermarket">Shopping Mall</ion-option>
+  <ion-option value="police">Police Station</ion-option>
+  <ion-option value="zoo">Zoo</ion-option>
+  </ion-select> 
+</ion-item> 
+
+<div #map class="map"></div>
+
+<!--  <ion-item *ngIf="url.length">
+      <ion-list *ngFor="let url of url">
+        <div>
+          <img [src]="url.url">
+        </div>
+        {{url.name}}
+      </ion-list>
+    </ion-item> -->
+
+      <div>
+    <ion-card class="shadow" no-margin margin-bottom color="light" *ngFor="let jobslist of url" (click)="goToGoogleplace(jobslist)">
+      <div class="card-img">
+        <img-loader [src]="jobslist.url"></img-loader>
+      </div>
+      <ion-card-content>
+        <ion-row no-padding>
+          <ion-col col-8>
+            <p class="bold">{{ jobslist.title }}</p>
+            <star-rating *ngIf="jobslist.rating"
+              [starType]="'svg'"
+              [size]="'medium'"
+              [readOnly]="true"
+              [showHalfStars]="false"
+              [rating]="jobslist.rating">
+            </star-rating>
+          </ion-col>
+          <ion-col col-4 text-end align-self-end>
+            <span class="bold text-small" ion-text color="primary">
+              {{ jobslist.distance }} km
+            </span>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content> 
+
+   
