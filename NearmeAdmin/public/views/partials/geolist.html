@@ -1,0 +1,101 @@
+<md-dialog flex="100" flex-gt-xs="40" aria-label="GeoList Dialog">
+  <form name="form" role="form" novalidate>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2 ng-show="isCreating">{{ 'NEW' | translate }}</h2>
+        <h2 ng-show="!isCreating">{{ 'EDIT' | translate }} {{::place.title }}</h2>
+        <span flex></span>
+        <ng-md-icon icon="close" class="icon-close" ng-click="cancel()"
+          aria-label="Close dialog"></ng-md-icon>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <md-content layout="column" layout-padding>
+
+  
+
+    
+
+        <md-input-container class="md-block">
+          <label>{{ 'TITLE' | translate }}</label>
+          <input type="text" required name="title" ng-model="geolist.title">
+          <div ng-messages="form.title.$error" ng-show="form.$submitted">
+            <div ng-message="required">{{ 'FIELD_REQUIRED' | translate }}</div>
+          </div>
+        </md-input-container>
+
+
+        <md-input-container>
+          <label>Message</label>
+          <input required name="message" ng-model="geolist.message">
+          <div ng-messages="form.message.$error" ng-show="form.$submitted">
+            <div ng-message="required">Messagerequired</div>
+          </div>
+        </md-input-container>
+
+
+      <md-input-container class="md-block">
+          <label>Radius</label>
+          <input type="number" name="radius" ng-model="geolist.radius">
+                    <div ng-messages="form.title.$error" ng-show="form.$submitted">
+
+          <div ng-message="required">Messagerequired</div>
+        </div>
+
+        </md-input-container>
+
+
+
+        <md-input-container class="md-block">
+          <label>{{ 'ADDRESS' | translate }}</label>
+          <input type="text" name="address" ng-model="geolist.address"
+            ng-model-options="{ debounce: 2000 }" ng-change="onAddressChanged()">
+        </md-input-container>
+
+        <md-input-container>
+          <ng-map class="map" scrollwheel="false"
+            map-type-control="false"
+            street-view-control="false">
+            <marker draggable="true" on-dragend="onMarkerDragEnd()"></marker>
+          </ng-map>
+        </md-input-container>
+
+        <div layout="row" layout-align="start center">
+          <md-input-container>
+            <label>{{ 'LATITUDE' | translate }}</label>
+            <input type="number" name="latitude"
+              ng-change="onInputLocationChanged()"
+              ng-model-options="{debounce:1000}"
+              ng-model="input.latitude">
+          </md-input-container>
+
+          <md-input-container>
+            <label>{{ 'LONGITUDE' | translate }}</label>
+            <input type="number" name="longitude"
+              ng-change="onInputLocationChanged()"
+              ng-model-options="{debounce:1000}"
+              ng-model="input.longitude">
+          </md-input-container>
+        </div>
+
+    
+      </md-content>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <md-button class="" ng-click="cancel()">
+          {{ 'CANCEL' | translate }}
+      </md-button>
+      <span flex></span>
+      <md-button type="submit" class="md-raised md-primary" ng-click="onSaveGeoList(form.$valid)"
+        ng-disabled="isSavingGeoList"
+        ng-show="isCreating">
+        {{ !isSavingPlace ? ('SAVE' | translate) : ('SAVING' | translate) }}
+      </md-button>
+      <md-button type="submit" class="md-raised md-primary" ng-click="onUpdateGeoList(form.$valid)"
+        ng-disabled="isSavingPlace"
+        ng-show="!isCreating">
+        {{ !isSavingPlace ? ('UPDATE' | translate) : ('UPDATING' | translate) }}
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

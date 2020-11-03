@@ -1,0 +1,246 @@
+<md-content ng-controller="SummaryCtrl">
+
+
+
+<md-table-container>
+    <h1 align="center">SUMMARY</h1>
+  <!--<table>
+    <tr>
+      <td>
+     <h>Roles: </h>
+     <table  md--table md-progress="promise" style="width:20%">
+      <thead md-head>
+        <tr md-row>
+          <th md-column>no'f Admins</th>
+          <td md-cell>{{filteredHeroes.Admin.length}}</td>
+        </tr>
+          <tr md-row>
+          <th md-column>no'f Users</th>
+          <td md-cell>{{filteredHeroes.User.length}}</td>
+         </tr>
+        <tr md-row>
+          <th md-column>no'f SO</th> 
+          <td md-cell>{{filteredHeroes.SO.length}}</td>
+        </tr>
+          <tr md-row>
+          <th md-column>no'f SL</th>
+          <td md-cell>{{filteredHeroes.SL.length}}</td>
+        </tr>
+        <tr md-row>
+          <th md-column></th>
+          <td md-cell></td>
+        </tr>
+      </thead>
+    </table>
+</td>
+
+
+ <td>
+    <h>Table of Data: </h>
+    <table  md--table md-progress="promise" style="width:20%">
+      <thead md-head>
+        <tr md-row>
+  
+          <th md-column>Category</th>
+
+          <td md-cell> {{categories.length}}</td>
+        </tr>
+
+        <tr md-row>
+          <th md-column>Offers</th>
+        <td md-cell> {{offers.length}}</td>
+        </tr>
+
+        <tr md-row>
+          <th md-column>CityUpdate</th> 
+         <td md-cell> {{ cityupdate.length}}</td>
+        </tr> 
+
+         <tr md-row>
+          <th md-column>Sale</th>
+          <td md-cell> {{ sale.length}}</td>
+        </tr>
+
+        <tr md-row>
+          <th md-column>jobs
+        <td md-cell> {{jobs.length}}</td></th>
+          
+        </tr>
+          <tr md-row>
+          <th md-column>rent
+        <td md-cell> {{rent.length}}</td></th>
+          
+        </tr>
+      </thead>
+    </table>
+ 
+    </td>
+   
+
+<td>
+   <h>Table of Lists: </h>
+   <table  md--table md-progress="promise" style="width:20%" >
+    <thead md-head>
+        <tr md-row>
+        <th md-column>places</th>
+        <td md-cell> {{places.length}}</td>
+        </tr>
+          <tr md-row>
+          <th md-column>offerslist</th>
+          <td md-cell> {{offerslists.length}}</td>
+        </tr>
+          <tr md-row>
+          <th md-column>updatelist</th>
+          <td md-cell> {{ updatelists.length}}</td>
+        </tr>
+          <tr md-row>
+          <th md-column>SaleList</th>
+          <td md-cell> {{salelists.length}}</td>
+        </tr>
+          <tr md-row>
+          <th md-column>jobslist</th>
+          <td md-cell> {{ jobslists.length}}</td>
+        </tr>
+        <tr md-row>
+          <th md-column>rentlist</th>
+          <td md-cell> {{ rentlists.length}}</td>
+        </tr>
+
+ 
+      </thead>
+      
+      </table>
+      </td>
+    </tr>
+  </table>
+-->
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+
+      <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Services</h3>
+          </div>
+          <table class="table table-hover" id="dev-table" style="color:black ">
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Categories</td>
+                <td>{{categories.length}}</td>           
+              </tr>
+      
+              <tr>
+                <td>2</td>
+                <td>Sale</td>
+                <td>{{sale.length}}</td>
+          
+              </tr>
+                 <tr>
+                <td>3</td>
+                <td>City Update </td>
+                <td>{{ cityupdate.length}}</td>
+          
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Jobs </td>
+                <td>{{ jobs.length}}</td>
+          
+              </tr>
+                <tr>
+                <td>5</td>
+                <td> Rent</td>
+                <td>{{ rent.length}}</td>
+          
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+         <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Services List</h3>
+          </div>
+   <table class="table table-hover" id="dev-table" style="color:black ">
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td> Places </td>
+                    <td>{{places.length}}</td>
+              </tr>
+          
+              <tr>
+                <td>2</td>
+                <td>Sale List</td>
+                <td>{{salelists.length}}</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Update List</td>
+                <td>{{updatelists.length}}</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Jobs List </td>
+                <td>{{jobslists.length}}</td>
+              </tr>
+               <tr>
+                <td>5</td>
+                <td>Rent List </td>
+                <td>{{rentlists.length}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+        </div>
+      </div>
+    </div>
+          <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Roles</h3>
+          </div>
+                 <table class="table table-hover" id="dev-table" style="color:black ">
+            <tbody>
+            
+                  <tr>
+                <td>1</td>
+                <td>User</td>
+                <td>{{filteredHeroes.User.length}}</td>
+              </tr>
+         
+              <tr>
+                <td>2</td>
+                <td>SO</td>
+                <td>{{filteredHeroes.SO.length}}</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>SL</td>
+                <td>{{filteredHeroes.SL.length}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </md-table-container>
+
+</md-content>
